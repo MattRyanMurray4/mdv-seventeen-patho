@@ -1,0 +1,9 @@
+<div class="info-container container">
+  <div class="col-50" layout="row" layout-align="center center">
+    <div *ngIf="currentDisease$ | async as disease">
+      <patho-disease-info
+        [disease]="currentDisease$ | async"
+      ></patho-disease-info>
+    </div>
+  </div>
+</div>

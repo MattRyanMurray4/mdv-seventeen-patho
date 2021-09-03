@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Message } from '@patho/api-interfaces';
 
 @Component({
   selector: 'patho-root',
@@ -8,6 +6,9 @@ import { Message } from '@patho/api-interfaces';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  hello$ = this.http.get<Message>('/api/hello');
-  constructor(private http: HttpClient) {}
+  title = 'Patho-Application';
+  links = [
+    { path: '/', icon: 'home', title: 'Login' },
+    { path: 'diseases', icon: 'view_list', title: 'Disease-List' },
+  ];
 }

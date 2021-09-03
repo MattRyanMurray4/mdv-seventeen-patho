@@ -14,8 +14,14 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
+    "strictPropertyInitialization": false,
     "paths": {
-      "@patho/api-interfaces": ["libs/api-interfaces/src/index.ts"]
+      "@patho/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@patho/core-data": ["libs/core-data/src/index.ts"],
+      "@patho/core-state": ["libs/core-state/src/index.ts"],
+      "@patho/material": ["libs/material/src/index.ts"],
+      "@patho/theme": ["libs/theme/src/index.ts"],
+      "@patho/ui-library": ["libs/ui-library/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

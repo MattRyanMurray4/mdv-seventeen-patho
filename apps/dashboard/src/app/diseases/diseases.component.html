@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="col-50" layout="row" layout-align="center center">
+    <patho-diseases-list
+      [diseases]="diseases$ | async"
+      (selected)="selectDisease($event)"
+      (deleted)="deleteDisease($event)"
+      (diseaseViewed)="viewDisease($event)"
+    ></patho-diseases-list>
+  </div>
+  <div class="col-50" layout="row" layout-align="center center">
+    <patho-disease-details
+      [form]="form"
+      [disease]="selectedDisease$ | async"
+      (saved)="saveDisease($event)"
+      (cancelled)="cancel()"
+    ></patho-disease-details>
+  </div>
+</div>
